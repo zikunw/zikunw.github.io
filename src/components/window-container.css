@@ -2,8 +2,8 @@
   /* main-window */
 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
--moz-box-sizing: border-box;    /* Firefox, other Gecko */
-box-sizing: border-box;         /* Opera/IE 8+ */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
 
   width: 80%;
   height: auto;
@@ -11,7 +11,7 @@ box-sizing: border-box;         /* Opera/IE 8+ */
   /* Auto layout */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 20px;
   margin: 20px;
   gap: 26px;
@@ -78,11 +78,5 @@ box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .window-container-content {
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px;
-  gap: 21px;
+
 }

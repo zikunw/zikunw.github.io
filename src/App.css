@@ -10,4 +10,13 @@
   top: 0px;
 
   background: #F3E9E8;
+
+  font-family: 'JetBrains Mono', 'Consolas', 'Andale Mono WT', 'Andale Mojo', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  color: #393939;
+}
+
+.my-photo {
+  width: min(200px, 100%);
+  height: min(200px, 100%);
+  border-radius: 50%;
 }
