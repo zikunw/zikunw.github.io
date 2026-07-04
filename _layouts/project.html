@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<main class="flex flex-col sm:flex-row">
+  <article class="w-full prose max-w-none">
+    <h1 class="text-3xl font-bold mt-1 mb-1">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="not-prose text-gray-600">{{ page.description }}</p>
+    {% endif %}
+    {% if page.links and page.links.size > 0 %}
+    <p class="not-prose text-sm mt-2">
+      {% for link in page.links %}
+      <a href="{{ link.url }}" class="text-indigo-600 underline">{{ link.text }}</a>
+      {% unless forloop.last %}<span class="text-gray-400 mx-2">·</span>{% endunless %}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    {{ content }}
+
+    <p class="not-prose mt-10">
+      <a href="/" class="text-indigo-600 underline">← Back to home</a>
+    </p>
+  </article>
+</main>

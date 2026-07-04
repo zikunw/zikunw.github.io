@@ -1,3 +1,20 @@
 ---
 layout: default
 ---
+
+<main class="flex flex-col sm:flex-row">
+  <article class="w-full prose max-w-none">
+    {% if page.heroImage %}
+    <img width="720" height="360" src="{{ page.heroImage }}" alt="" class="shadow-lg border" />
+    {% endif %}
+    <h1 class="text-3xl font-bold mt-1 mb-2">{{ page.title }}</h1>
+    {% if page.date %}
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="text-gray-500">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% endif %}
+    {% if page.updatedDate %}
+    <div class="text-gray-500">Last updated on <time datetime="{{ page.updatedDate }}">{{ page.updatedDate }}</time></div>
+    {% endif %}
+
+    {{ content }}
+  </article>
+</main>
