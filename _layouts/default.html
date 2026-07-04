@@ -4,6 +4,16 @@
   {% if page.title %}{% assign page_title = page.title %}{% else %}{% assign page_title = site.name %}{% endif %}
   {% if page.description %}{% assign page_description = page.description %}{% else %}{% assign page_description = site.description %}{% endif %}
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRPBN3CS30"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZRPBN3CS30');
+  </script>
+
   <!-- Global Metadata -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
