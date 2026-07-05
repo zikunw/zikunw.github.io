@@ -28,53 +28,21 @@ description: Zikun Wang's personal website.
     <ul class="">
       <li class="my-2">
         <a href="/projects/jasper/" class="flex items-center gap-4 p-2 rounded hover:bg-gray-50 transition-colors">
-          <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-gradient-to-br from-indigo-50 to-indigo-100 ring-1 ring-indigo-200/60 flex items-center justify-center shadow-sm">
-            <svg class="w-10 h-10" viewBox="0 0 24 24">
-              <g stroke="#818cf8" stroke-width="1.25" stroke-linecap="round">
-                <line x1="5" y1="6" x2="12" y2="12" />
-                <line x1="18" y1="5" x2="12" y2="12" />
-                <line x1="12" y1="12" x2="6" y2="19" />
-                <line x1="12" y1="12" x2="19" y2="18" />
-                <line x1="5" y1="6" x2="6" y2="19" />
-                <line x1="18" y1="5" x2="19" y2="18" />
-              </g>
-              <g fill="#6366f1">
-                <rect x="3" y="4" width="4" height="4" rx="0.75" />
-                <rect x="16" y="3" width="4" height="4" rx="0.75" />
-                <rect x="4" y="17" width="4" height="4" rx="0.75" />
-                <rect x="17" y="16" width="4" height="4" rx="0.75" />
-              </g>
-              <rect x="9.2" y="9.2" width="5.6" height="5.6" rx="1" fill="#4338ca" stroke="#e0e7ff" stroke-width="1" />
-            </svg>
+          <div class="flex-shrink-0 w-32 h-20 bg-gradient-to-br ring-1 ring-indigo-200/60 flex items-center justify-center shadow-sm">
+            <img src="/img/anns.png" alt="Approximated Nearest Neighbor" class="w-full h-full object-contain rounded-lg" />
           </div>
           <div>
             <p class="text-gray-900 font-semibold">GPU Accelerated Approximate Nearest Neighbor Search</p>
-            <p class="text-gray-700 text-sm">An updatable GPU index for vector search at scale.</p>
+            <p class="text-gray-700 text-sm">
+              In this project, we built a library providing an updatable index for approximate nearest neighbor search on GPU. Our goal is to efficiently scale its construction and querying beyond GPU memory, handling vector search at billion scale.
+            </p>
           </div>
         </a>
       </li>
       <li class="my-2">
         <a href="/projects/streaming/" class="flex items-center gap-4 p-2 rounded hover:bg-gray-50 transition-colors">
-          <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-gradient-to-br from-indigo-50 to-indigo-100 ring-1 ring-indigo-200/60 flex items-center justify-center shadow-sm">
-            <svg class="w-10 h-10" viewBox="0 0 24 24">
-              <!-- one stream fans out into parallel lanes: scaling dataflow at runtime -->
-              <g stroke="#818cf8" stroke-width="1.5" stroke-linecap="round" fill="none">
-                <path d="M5.5 12 L18 5" />
-                <path d="M5.5 12 L18 12" />
-                <path d="M5.5 12 L18 19" />
-              </g>
-              <g fill="#a5b4fc">
-                <circle cx="11.75" cy="8.5" r="0.9" />
-                <circle cx="11.75" cy="12" r="0.9" />
-                <circle cx="11.75" cy="15.5" r="0.9" />
-              </g>
-              <g fill="#6366f1">
-                <rect x="1.5" y="10" width="4" height="4" rx="0.75" />
-                <rect x="18" y="3" width="4" height="4" rx="0.75" />
-                <rect x="18" y="10" width="4" height="4" rx="0.75" />
-                <rect x="18" y="17" width="4" height="4" rx="0.75" />
-              </g>
-            </svg>
+          <div class="flex-shrink-0 w-32 h-20 bg-gradient-to-br ring-1 ring-indigo-200/60 flex items-center justify-center shadow-sm p-1">
+            <img src="/img/streaming-reconfig.png" alt="Adaptive Streaming System" class="w-full h-full object-contain rounded-lg" />
           </div>
           <div>
             <p class="text-gray-900 font-semibold">Adaptive Streaming System</p>
