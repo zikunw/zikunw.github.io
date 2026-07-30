@@ -3,6 +3,11 @@ layout: project
 permalink: /projects/jasper/
 title: "GPU-accelerated approximate nearest neighbor search"
 description: An updatable GPU index for billion-scale vector search.
+links:
+  - text: "GitHub: saltsystemslab/jasperpy"
+    url: "https://github.com/saltsystemslab/jasperpy"
+  - text: "arXiv:2601.07048"
+    url: "https://arxiv.org/abs/2601.07048"
 ---
 
 Approximate nearest neighbor search (ANNS) finds the vectors closest to a query in high-dimensional space, and it underpins recommendation, image retrieval, anomaly detection, and retrieval-augmented generation (RAG) for large language models. Graph-based indices such as Vamana offer the best recall–throughput trade-off, and GPUs are a natural fit: their massive parallelism can serve millions of queries per second.
