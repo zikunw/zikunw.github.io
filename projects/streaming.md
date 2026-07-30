@@ -7,14 +7,14 @@ description: Mechanisms and policies for efficiently scaling streaming workloads
 
 Data stream processing applications are long-running and deployed as a dataflow of operator tasks spread across physical workers. Two challenges make them hard to run efficiently:
 
-**Policy: Choosing a good configuration is hard.** Operators have diverse resource requirements, and co-locating tasks that compete for the same resource — CPU, disk I/O, or network — creates contention that cripples throughput. The search space is enormous (millions of candidate plans for even a handful of operators on a few workers), and existing approaches fall short: random placement (e.g., Flink's default) often lands on poor plans, while ILP-based methods are too slow for online use and hard to extend with richer objectives.
+**Policy: Choosing a good configuration is hard.** Operators have diverse resource requirements, and co-locating tasks that compete for the same resource (CPU, disk I/O, or network) creates contention that cripples throughput. The search space is enormous (millions of candidate plans for even a handful of operators on a few workers), and existing approaches fall short: random placement (e.g., Flink's default) often lands on poor plans, while ILP-based methods are too slow for online use and hard to extend with richer objectives.
 
 <figure class="not-prose my-6 mx-auto max-w-md">
   <img src="/img/streaming-reconfig.png" alt="Adaptive Streaming System" class="w-full ring-1 ring-indigo-200/60 shadow" />
   <figcaption class="text-center text-sm text-gray-500 mt-2">Runtime reconfiguration of a streaming dataflow causes downtime due to state migration overhead.</figcaption>
 </figure>
 
-**Mechanism: Changing the configuration at runtime is disruptive.** Workloads are dynamic and unpredictable, so any initial configuration eventually drifts out of tune — input rates spike, data skews, or a host becomes unavailable — forcing frequent reconfiguration. Yet today's mechanisms all stall the pipeline to do it: stop-and-restart pauses execution to drain in-flight data, and stateful rescaling blocks to flush and migrate operator state (which can be many gigabytes). The result is system downtime precisely when the system most needs to adapt.
+**Mechanism: Changing the configuration at runtime is disruptive.** Workloads are dynamic and unpredictable, so any initial configuration eventually drifts out of tune: input rates spike, data skews, or a host becomes unavailable, forcing frequent reconfiguration. Yet today's mechanisms all stall the pipeline to do it: stop-and-restart pauses execution to drain in-flight data, and stateful rescaling blocks to flush and migrate operator state (which can be many gigabytes). The result is system downtime precisely when the system most needs to adapt.
 
 This project addresses both the policy and the mechanism. For the placement **policy**, see the CAPSys [publication](#publication) and the [task-placement poster](/posters/placement.pdf) below. For the zero-downtime reconfiguration **mechanism**, see the [reconfiguration poster](/posters/reconfiguration.pdf); the [workload-scaling poster](/posters/UROP.pdf) covers the scaling policy that drives it.
 

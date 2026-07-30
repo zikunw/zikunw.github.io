@@ -4,15 +4,15 @@ Personal website and blog of Zikun Wang, served at
 [zikunw.github.io](https://zikunw.github.io) via GitHub Pages.
 
 Built with [Jekyll](https://jekyllrb.com/). Styling uses [Tailwind CSS](https://tailwindcss.com/)
-loaded through the Play CDN, so no build step beyond Jekyll's own is required —
+loaded through the Play CDN, so no build step beyond Jekyll's own is required:
 GitHub Pages builds and deploys the site automatically on push to `master`.
 
 ## Structure
 
-- `index.html` — homepage (bio, publications, posters, teaching, links).
-- `_layouts/default.html` — base layout: `<head>`, header, and footer.
-- `_layouts/post.html` — blog post layout.
-- `_posts/` — blog posts, one Markdown file per post.
+- `index.html`: homepage (bio, publications, posters, teaching, links).
+- `_layouts/default.html`: base layout: `<head>`, header, and footer.
+- `_layouts/post.html`: blog post layout.
+- `_posts/`: blog posts, one Markdown file per post.
 - Root assets (`me.jpg`, `power.png`, `Resume.pdf`, `posters/`, favicons) are
   referenced by absolute path (e.g. `/me.jpg`).
 
